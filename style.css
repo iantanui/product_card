@@ -23,7 +23,7 @@ body {
 }
 
 .card:hover {
-    width: 600px; /* Increase width to accommodate details section */
+    width: 600px; 
 }
 
 .imgBox {
@@ -44,8 +44,8 @@ body {
 .details {
     position: absolute;
     top: 0;
-    right: -300px; /* Place details off-screen initially */
-    width: 300px; /* Same width as the card */
+    right: -300px;
+    width: 300px;
     height: 100%;
     padding: 20px;
     background: white;
@@ -57,7 +57,7 @@ body {
 }
 
 .card:hover .details {
-    right: 0; /* Slide details into view on hover */
+    right: 0;
 }
 
 .details h3 {
