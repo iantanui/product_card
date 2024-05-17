@@ -2,22 +2,127 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(#4ba9e9 0, #4ba9e9 50%, #fff 100%);
+    background: linear-gradient(#4ba9e9 0%, #4ba9e9 50%, #fff 100%);
     min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
 .card {
     position: relative;
-    width: 200px;
-    height: 380px;
-    background: #0000;
-    display: flex;
-    box-shadow: 0 15px 45px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 450px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    transition: 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card .imgBox {
+.card:hover {
+    width: 600px; /* Increase width to accommodate details section */
+}
+
+.imgBox {
     position: relative;
-    min-width: 300px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+.imgBox img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.details {
+    position: absolute;
+    top: 0;
+    right: -300px; /* Place details off-screen initially */
+    width: 300px; /* Same width as the card */
+    height: 100%;
+    padding: 20px;
+    background: white;
+    box-sizing: border-box;
+    transition: right 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card:hover .details {
+    right: 0; /* Slide details into view on hover */
+}
+
+.details h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #1f1846;
+}
+
+.details h3 span {
+    font-size: 0.8em;
+    color: #777;
+}
+
+.details h4 {
+    margin: 15px 0 5px;
+    font-size: 1.2em;
+    color: #1f1846;
+    text-transform: uppercase;
+}
+
+.details p {
+    color: #1f1846;
+    font-size: 0.9em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.dial {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.dial li {
+    background-color: #eee;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #1f1846;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dial li:hover {
+    background-color: #ddd;
+}
+
+.group {
+    margin-top: 15px;
+}
+
+.buy-btn {
+    padding: 10px 20px;
+    background-color: #1f1846;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.buy-btn:hover {
+    background-color: #3a8bc9;
 }
